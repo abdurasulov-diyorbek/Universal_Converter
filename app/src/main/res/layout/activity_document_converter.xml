@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A5FFB3"
+    tools:context=".DocumentConverterActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:text="Smart Document Converter"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:padding="15dp"
+        android:id="@+id/select_doc_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:visibility="visible"
+        android:background="#65FFFFFF">
+
+        <ImageView
+            android:src="@drawable/add_image"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/select_doc_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a Document"
+            android:textSize="25sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/info_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_doc_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="65dp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="In this app, you can change documents format. Just select any document, like .pdf, word, .wordx etc. And convert it to another format."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:id="@+id/converting_and_result_view"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#65FFFFFF"
+        android:visibility="gone"
+        android:padding="10dp">
+
+        <ImageView
+            android:src=""
+            android:id="@+id/image_view"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:text="Select Format to Convert"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/to_jpg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="PDF"/>
+
+            <RadioButton
+                android:id="@+id/to_png"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20sp"
+                android:text="WORD"/>
+
+            <RadioButton
+                android:id="@+id/to_webp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="WORDX"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/start_convert_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@color/blue"
+            android:textSize="25sp"
+            android:text="Convert"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/save_to_gallery_view"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:src="@drawable/done_pic"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Successfully saved to the Internal Storage!!!"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Home"
+            android:background="#FF2907"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

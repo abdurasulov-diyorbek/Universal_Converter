@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A5FFB3"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:id="@+id/container_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#65FFFFFF">
+
+        <Button
+            android:layout_marginTop="100dp"
+            android:id="@+id/image_converter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image Converter"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:visibility="visible"/>
+
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:id="@+id/doc_converter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Document Converter"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:visibility="visible"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
